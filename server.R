@@ -1,7 +1,10 @@
 library(shiny)
+
+## the training data has already been cleaned and added missing age, Fare, cabin data
+## also added fami.id and fam.size based on family name and SibSp, and Parch
 training <- read.csv("titanic_train.csv")
 
-
+## creating a matrix, turning factors into dummy variables
 training.mod.mat <- model.matrix(Survived ~ Pclass + Sex + Age + Fare  + group +
                                      title + cabin.letter + SibSp + Parch +
                                      fam.size + fam.id, data=training)
@@ -9,7 +12,7 @@ training.mod.mat <- model.matrix(Survived ~ Pclass + Sex + Age + Fare  + group +
 
 library(glmnet)
 
-
+## use cross-validated lasso to find the best lambda value that has the best AUC
 lasso.cv.fit <- cv.glmnet(x=training.mod.mat,
                           y=as.factor(training$Survived),
                           family="binomial",
@@ -19,47 +22,10 @@ lasso.cv.fit <- cv.glmnet(x=training.mod.mat,
 
 # Define server logic for random distribution application
 shinyServer(function(input, output) {
+    ## use the first line of training data as placeholder, and stepwise replace each field based on user inputs
     ph <- training[1,]
-    # Reactive expression to generate the requested distribution. This is 
-    # called whenever the inputs change. The output renderers defined 
-    # below then all used the value computed from this expression
-#      data <- reactive({  
-# # #         dist <- switch(input$dist,
-# # #                        norm = rnorm,
-# # #                        unif = runif,
-# # #                        lnorm = rlnorm,
-# # #                        exp = rexp,
-# # #                        rnorm)
-# #       
-#     sex <- input$sex
-#     age <- input$age
-#     group <- input$group
-#     t.string <- c(sex, age, group)
-# #         input$n
-#     })
     
-    # Generate a plot of the data. Also uses the inputs to build the 
-    # plot label. Note that the dependencies on both the inputs and
-    # the data reactive expression are both tracked, and all expressions 
-    # are called in the sequence implied by the dependency graph
-#     output$plot <- renderPlot({
-#         dist <- input$dist
-#         n <- input$n
-#         
-#         hist(data(), 
-#              main=paste('r', dist, '(', n, ')', sep=''))
-#     })
-    
-
-#     data <- reactive({  
-# 
-# 
-#     })
-    
-    
-    
-    
-    # Generate a summary of the data
+    ## directly display output result 
     output$summary <- renderPrint({
         ph$Pclass <- as.numeric(input$pclass)
         
@@ -121,9 +87,7 @@ shinyServer(function(input, output) {
         ph$fam.size <- ph$Parch + ph$SibSp
         
         
-        
-        
-        #         ph.pred <- predict(lasso.cv.fit, newx=ph.mod, s="lambda.min", type="class")
+        ## turn the user input data into a matrix that has the same fields as the training dataset matrix
         ph.test <- model.matrix(Survived ~ Pclass + Sex + Age + Fare  + group +
                                     title + cabin.letter + SibSp + Parch + 
                                     fam.size + fam.id, data=ph)
@@ -132,17 +96,7 @@ shinyServer(function(input, output) {
         paste0(round(ph.pred[1,1], 2) * 100,"%"," likely to survive.")
 
 
-#         data <- c(input$sex, input$age, input$group, 
-#           input$fare, input$pclass, input$title,
-#           input$sibsp, input$parch)
-#         data <- c(data, 1509)
-        
-    
-        
     })
     
-    # Generate an HTML table view of the data
-#     output$table <- renderTable({
-#         data.frame(x=data())
-#     })
+
 })
