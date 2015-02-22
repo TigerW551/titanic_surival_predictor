@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="shared/jquery.js" type="text/javascript"></script>
+    <script src="shared/shiny.js" type="text/javascript"></script>
+    <link rel="stylesheet" type="text/css" href="shared/shiny.css"/>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="How likely would you have survived the Titanic if you traveled back in time? ">
+    <meta name="author" content="Sizhan Shi">
+    <link rel="icon" href="../../favicon.ico">
+
+    <title>Titanic Survival Predictor</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="bootstrap-3.3.2-dist/css/bootstrap.min.css" rel="stylesheet">
+
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <link href="carousel.css" rel="stylesheet">
+
+
+</head>
+
+<!-- NAVBAR
+================================================== -->
+<body>
+<div class="navbar-wrapper">
+    <div class="container">
+
+        <nav class="navbar navbar-inverse navbar-static-top">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="index.html">Titanic Survival Predictor</a>
+                </div>
+                <div id="navbar" class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav">
+                        <li><a href="index.html">Home</a></li>
+                        <li class="active"><a href="about.html">About</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+    </div>
+</div>
+
+
+
+<!-- Carousel
+================================================== -->
+<div id="myCarousel" class="carousel slide" data-ride="carousel">
+
+    <div class="carousel-inner" role="listbox">
+        <div class="item active">
+            <img id="cover" src="img/titanic_large_2.jpg" alt="First slide" style="background-size: contain">
+
+            <div class="container">
+                <div class="carousel-caption">
+                    <h1>Would you have survived the Titanic?</h1>
+                    <p> You finally got the time machine working, and traveled back to 1912. You bought a ticket for Titanic. 1502 out of 2224 passengers and crew died. You were the 2225th. How likely could you have survived? Fill out the following form and let me calculate your probability of survival.
+
+                    </p>
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</div><!-- /.carousel -->
+
+<!-- Marketing messaging and featurettes
+================================================== -->
+<!-- Wrap the rest of the page in another container to center all the content. -->
+
+
+<div id="quizStart" class="container marketing">
+
+    <div class="row">
+        <h1>About this project</h1>
+
+        <p>The idea came from the Kaggle machine learning competition <a href="http://www.kaggle.com/c/titanic-gettingStarted">"Titanic: Machine Learning from Disaster"</a>.
+        </p>
+        <p>As an introductory machine learning project, Kaggle provided neatly organized data of each of the 1200+ Titanic passengers.
+        The data include the following fields:</p>
+        <ul>
+            <li>Pclass: a proxy for socio-economic status</li>
+            <li>Name: full name including title</li>
+            <li>Sex</li>
+            <li>Age</li>
+            <li>SibSp: brother, sister, stepbrother, or stepsister of passenger aboard Titanic; as well as spouse</li>
+            <li>Parch: mother or father of passenger aboard Titanic, plus children</li>
+            <li>Cabin</li>
+            <li>Embarked: port of embarkation</li>
+        </ul>
+        <p>The Kaggle data were broken into two sets: a training set and a testing set. The only difference between these two datasets is that in
+        the training set data, the survival information of the passenger was given, while the testing dataset it was not. Participants of the
+        competition is expected to use the training set to create prediction models, and apply them to the testing set
+        to predict the passengers' survival.</p>
+
+        <p>I created multiple models for this competition. Some models have higher accuracy (mostly tree-based), but with obvious trade off of low interpretability. For this
+        specific project, I thought it would be fun to let users select individual fields, and tell them how likely they were to survive the instance.
+        Logistic Regression model with the Lasso regularization (10-fold cross-validation was used to select the lambda value with the highest
+            training set accuracy) method was used for its high accuracy and excellent interpretability. </p>
+
+        <p>The final logistic regression model used for this project has AUC about 88% on the training set, and about 78% out-of-bag accuracy. Some of the
+            fields, like cabin letter initial and last name could increase accuracy, but will likely slow down the web experience, thus were not included. The following fields
+        were used in the model, all of which have non-zero coefficiencies:</p>
+        <ul>
+            <li>Pclass</li>
+            <li>Sex</li>
+            <li>Age</li>
+            <li>Fare</li>
+            <li>If traveled in group and shared cabin</li>
+            <li>Title is Don</li>
+            <li>Title is Jonkheer</li>
+            <li>Title is Master</li>
+            <li>Title is Mr</li>
+            <li>Title is Mrs</li>
+            <li>Title is Rev</li>
+            <li>Title is Sir</li>
+            <li>SibSp</li>
+            <li>Total family memebers aboard</li>
+        </ul>
+        <p>Reproducible R code could be found on the github page.</p>
+
+
+
+    </div>
+
+    <hr class="featurette-divider">
+
+
+
+
+
+    <!-- FOOTER -->
+    <footer>
+        <p class="pull-right"><a href="#">Back to top</a></p>
+        <p>&copy; 2015 Sizhan Shi &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a></p>
+    </footer>
+
+
+</div><!-- /.container -->
+
+<!-- Bootstrap core JavaScript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<script src="bootstrap-3.3.2-dist/js/bootstrap.min.js"></script>
+<script src="bootstrap-3.3.2-distjs/docs.min.js"></script>
+<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+<script src="bootstrap-3.3.2-dist/js/ie10-viewport-bug-workaround.js"></script>
+</body>
+</html>
+

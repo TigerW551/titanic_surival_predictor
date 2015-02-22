@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="shared/jquery.js" type="text/javascript"></script>
+    <script src="shared/shiny.js" type="text/javascript"></script>
+    <link rel="stylesheet" type="text/css" href="shared/shiny.css"/>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="How likely would you have survived the Titanic if you traveled back in time? ">
+    <meta name="author" content="Sizhan Shi">
+    <link rel="icon" href="../../favicon.ico">
+
+    <title>Titanic Survival Predictor</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="bootstrap-3.3.2-dist/css/bootstrap.min.css" rel="stylesheet">
+
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <link href="carousel.css" rel="stylesheet">
+
+
+</head>
+
+<!-- NAVBAR
+================================================== -->
+<body>
+<div class="navbar-wrapper">
+    <div class="container">
+
+        <nav class="navbar navbar-inverse navbar-static-top">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="index.html">Titanic Survival Predictor</a>
+                </div>
+                <div id="navbar" class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav">
+                        <li class="active"><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+    </div>
+</div>
+
+
+
+<!-- Carousel
+================================================== -->
+<div id="myCarousel" class="carousel slide" data-ride="carousel">
+
+    <div class="carousel-inner" role="listbox">
+        <div class="item active">
+            <img id="cover" src="img/titanic_large_2.jpg" alt="First slide" style="background-size: contain">
+
+            <div class="container">
+                <div class="carousel-caption">
+                    <h1>Would you have survived the Titanic?</h1>
+                    <p> You finally got the time machine working, and traveled back to 1912. You bought a ticket for Titanic. 1502 out of 2224 passengers and crew died. You were the 2225th. How likely could you have survived? Fill out the following form and let me calculate your probability of survival.
+
+                    </p>
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</div><!-- /.carousel -->
+
+
+<!-- Marketing messaging and featurettes
+================================================== -->
+<!-- Wrap the rest of the page in another container to center all the content. -->
+
+
+<div id="quizStart" class="container marketing">
+    <form>
+    <!-- Three columns of text below the carousel -->
+    <div class="row">
+        <div class="col-lg-4">
+            <img class="img-circle" src="img/sex.png" alt="gender" style="...">
+            <h2>Gender</h2>
+            <p>A lady or a gentleman? Remember, it's 1912, when chivalry was still alive. </p>
+            <div>
+                <select name="sex" class="form-control" style="margin-left: auto; margin-right: auto; width: 40%">
+                    <option value="male">male</option>
+                    <option value="female">female</option>
+                </select>
+
+            </div>
+        </div><!-- /.col-lg-4 -->
+        <div class="col-lg-4">
+            <img class="img-circle" src="img/age.png" alt="Generic placeholder image" style="width: 140px; height: 140px;">
+            <h2>Age</h2>
+            <p>Mind telling me your age? Don't worry, anyone born before 1912 is definitely old today, no matter what.</p>
+            <div>
+                <input name="age" type="number" min="1" max="99" placeholder="36" style="width: 20%" >
+            </div>
+        </div><!-- /.col-lg-4 -->
+        <div class="col-lg-4">
+            <img class="img-circle" src="img/group.jpg" alt="Generic placeholder image" style="width: 140px; height: 140px;">
+            <h2>Group</h2>
+            <p>Traveling solo or sharing the cabin with someone? You might have to fight them when it comes to lifeboats.</p>
+            <div>
+                <select name="group" class="form-control" style="margin-left: auto; margin-right: auto; width: 60%">
+                    <option value="0">solo. not sharing the cabin.</option>
+                    <option value="1">with a group. sharing a cabin</option>
+                </select>
+            </div>
+        </div>
+
+    </div><!-- /.row -->
+
+
+    <!-- START THE FEATURETTES -->
+
+    <hr class="featurette-divider">
+
+    <div class="row featurette">
+        <div class="col-md-7">
+            <h2 class="featurette-heading">How much did you pay for that ticket?<span class="text-muted">It's not worth it.</span></h2>
+            <p class="lead">The cheapest ticket was 7 pounds -- in 1912, so considering inflation, it's about $1,100 today. You can type in any number between 7 to 870 (that's $70,000 today. I dare you.).</p>
+
+            <div class="form-group">
+
+                <div class="input-group">
+                    <div class="input-group-addon">£</div>
+                    <input name="fare" type="number" class="form-control" min="7" placeholder="7">
+
+                </div>
+            </div>
+
+
+
+        </div>
+        <div class="col-md-5">
+            <img class="featurette-image img-responsive"  src="img/titanic-boarding-pass.jpg" alt="Generic placeholder image" style="margin-right: 0;margin-left: auto">
+        </div>
+    </div>
+
+    <hr class="featurette-divider">
+
+    <div class="row featurette">
+        <div class="col-md-5">
+            <img class="featurette-image img-responsive" src="img/class.png" alt="Generic placeholder image">
+        </div>
+        <div class="col-md-7">
+            <h2 class="featurette-heading">Socio-economic status. <span class="text-muted">It mattered. You watched the movie right?</span></h2>
+            <p class="lead">Majority of the passengers belonged to the lower class. You can be a lower class, but also can draw, and are deadly handsome.</p>
+            <div>
+                <select name="pclass" class="form-control" style="margin-left: auto; margin-right: auto; width: 100%">
+                    <option value="3">3 - lower class</option>
+                    <option value="2">2 - middle class</option>
+                    <option value="1">1 - upper class</option>
+                </select>
+            </div>
+        </div>
+    </div>
+
+    <hr class="featurette-divider">
+
+    <div class="row featurette">
+        <div class="col-md-7">
+            <h2 class="featurette-heading">Your title. <span class="text-muted">How do people address you?</span></h2>
+            <p class="lead">You can be anything you want to be, but your title may not make a difference when it comes to life or death.</p>
+            <div>
+                <select name="title" class="form-control" style="margin-left: auto; margin-right: auto; width: 100%">
+                    <option value="Mr">Mr.</option>
+                    <option value="Ms">Ms.</option>
+                    <option value="Mrs">Mrs.</option>
+                    <option value="Master">Master: a young unmarried boy</option>
+                    <option value="Miss">Miss: a young unmarried woman</option>
+                    <option value="Capt">Capt: honorific addressed to someone served in military with Captain ranking</option>
+                    <option value="Col">Col: someone served in military with Colonel ranking (higher than Captain)</option>
+                    <option value="Don">Don: Spanish honorific equivalent to "Mister"</option>
+                    <option value="Dona">Dona: Spanish honorific equivalent to "Miss"</option>
+                    <option value="Dr">Dr: Someone with a doctorate-level degree</option>
+                    <option value="Jonkheer">Jonkheer: Dutch honorific of nobility, equivalent to "Master"</option>
+                    <option value="Lady">Lady: a woman of nobility</option>
+                    <option value="Major">Major: someone served in military, higher than Captain but lower than Colonel</option>
+                    <option value="Mlle">Mlle: french honorific equivalent to "Miss"</option>
+                    <option value="Mme">Mme: french honorific equivalent to "Mrs"</option>
+                    <option value="Rev">Rev: a Christian clergy or minister</option>
+                    <option value="Sir">Sir: a knight</option>
+                    <option value="Countess">Countess: a woman of nobility</option>
+
+                </select>
+            </div>
+
+
+        </div>
+        <div class="col-md-5">
+            <img class="featurette-image img-responsive" src="img/title.jpg" alt="Generic placeholder image" style="margin-right: 0px;margin-left: auto">
+        </div>
+    </div>
+
+    <hr class="featurette-divider">
+
+    <div class="row featurette">
+        <div class="col-md-5">
+            <img class="featurette-image img-responsive" src="img/family.jpg" alt="Generic placeholder image">
+        </div>
+        <div class="col-md-7">
+            <h2 class="featurette-heading">Family on board. <span class="text-muted">Did you travel with family? </span></h2>
+            <p class="lead">Sometimes you have to hurt others to protect the ones you love.</p>
+            <div class="form-group">
+                <label for="sibsp">Siblings plus spouse on board</label>
+                <input name="sibsp" type="number" min="0" max="10" class="form-control" id="sibsp" placeholder="1">
+            </div>
+            <div class="form-group">
+                <label for="parch">Parents plus children on board</label>
+                <input name="parch" type="number" min="0" max="10" class="form-control" id="parch" placeholder="2">
+            </div>
+        </div>
+    </div>
+
+    <hr class="featurette-divider">
+
+    <!-- /END THE FEATURETTES -->
+
+        <div>
+
+            <button class="btn btn-lg btn-primary" type="submit" role="button" style="margin-left:auto;margin-right:auto;display:block;">(re)Calculate your fate</button>
+        </div>
+
+
+</form>
+
+    <div id="summary" class="shiny-text-output shiny-bound-output" style="height:200px;text-align: center;margin-top: 50px;font-size: 75px">
+
+    </div>
+    <hr class="featurette-divider">
+
+
+
+
+
+    <!-- FOOTER -->
+    <footer>
+        <p class="pull-right"><a href="#">Back to top</a></p>
+        <p>&copy; 2015 Sizhan Shi &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a></p>
+    </footer>
+
+
+</div><!-- /.container -->
+
+<!-- Bootstrap core JavaScript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<script src="bootstrap-3.3.2-dist/js/bootstrap.min.js"></script>
+<script src="bootstrap-3.3.2-distjs/docs.min.js"></script>
+<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+<script src="bootstrap-3.3.2-dist/js/ie10-viewport-bug-workaround.js"></script>
+</body>
+</html>
+
