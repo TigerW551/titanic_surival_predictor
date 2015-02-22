@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="0a203583-11a5-4548-baf3-2ab40c504654" name="Default" comment="" />
+    <list default="true" id="0a203583-11a5-4548-baf3-2ab40c504654" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../www/about.html" afterPath="$PROJECT_DIR$/../www/about.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+    </list>
     <ignored path="titanic_survivial_pred.iws" />
     <ignored path=".idea/workspace.xml" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -25,7 +29,7 @@
   <component name="FileEditorManager">
     <leaf>
       <file leaf-file-name="carousel.css" pinned="false" current-in-tab="false">
-        <entry file="file://$USER_HOME$/R/ddp-wk3/www/carousel.css">
+        <entry file="file://$PROJECT_DIR$/../www/carousel.css">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2100">
               <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -35,7 +39,7 @@
         </entry>
       </file>
       <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
-        <entry file="file://$USER_HOME$/R/ddp-wk3/www/index.html">
+        <entry file="file://$PROJECT_DIR$/../www/index.html">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="-11.333333" vertical-offset="508" max-vertical-offset="4215">
               <caret line="52" column="49" selection-start-line="52" selection-start-column="49" selection-end-line="52" selection-end-column="49" />
@@ -53,7 +57,7 @@
         </entry>
       </file>
       <file leaf-file-name="contact.html" pinned="false" current-in-tab="false">
-        <entry file="file://$USER_HOME$/R/ddp-wk3/www/contact.html">
+        <entry file="file://$PROJECT_DIR$/../www/contact.html">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="-10.083333" vertical-offset="1183" max-vertical-offset="2100">
               <caret line="95" column="26" selection-start-line="95" selection-start-column="26" selection-end-line="95" selection-end-column="26" />
@@ -65,7 +69,7 @@
         </entry>
       </file>
       <file leaf-file-name="junkyard.html" pinned="false" current-in-tab="false">
-        <entry file="file://$USER_HOME$/R/ddp-wk3/www/junkyard.html">
+        <entry file="file://$PROJECT_DIR$/../www/junkyard.html">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="-3.125" vertical-offset="0" max-vertical-offset="165">
               <caret line="5" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
@@ -77,10 +81,10 @@
         </entry>
       </file>
       <file leaf-file-name="about.html" pinned="false" current-in-tab="true">
-        <entry file="file://$USER_HOME$/R/ddp-wk3/www/about.html">
+        <entry file="file://$PROJECT_DIR$/../www/about.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.49833888" vertical-offset="0" max-vertical-offset="2670">
-              <caret line="20" column="17" selection-start-line="20" selection-start-column="17" selection-end-line="20" selection-end-column="17" />
+            <state vertical-scroll-proportion="0.07807309" vertical-offset="1903" max-vertical-offset="2700">
+              <caret line="130" column="33" selection-start-line="130" selection-start-column="33" selection-end-line="130" selection-end-column="33" />
               <folding>
                 <element signature="n#style#0;n#img#0;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
@@ -90,15 +94,18 @@
       </file>
     </leaf>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$USER_HOME$/R/ddp-wk3/titanic_survivial_pred/carousel.css" />
-        <option value="$USER_HOME$/R/ddp-wk3/titanic_survivial_pred/index.html" />
-        <option value="$USER_HOME$/R/ddp-wk3/www/junkyard.html" />
-        <option value="$USER_HOME$/R/ddp-wk3/www/index.html" />
-        <option value="$USER_HOME$/R/ddp-wk3/www/contact.html" />
-        <option value="$USER_HOME$/R/ddp-wk3/www/about.html" />
+        <option value="$PROJECT_DIR$/carousel.css" />
+        <option value="$PROJECT_DIR$/index.html" />
+        <option value="$PROJECT_DIR$/../www/junkyard.html" />
+        <option value="$PROJECT_DIR$/../www/index.html" />
+        <option value="$PROJECT_DIR$/../www/contact.html" />
+        <option value="$PROJECT_DIR$/../www/about.html" />
       </list>
     </option>
   </component>
@@ -111,7 +118,7 @@
     <option name="width" value="1275" />
     <option name="height" value="746" />
   </component>
-  <component name="ProjectLevelVcsManager" settingsEditedManually="false">
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <OptionsSetting value="true" id="Add" />
     <OptionsSetting value="true" id="Remove" />
     <OptionsSetting value="true" id="Checkout" />
@@ -135,7 +142,14 @@
     </navigator>
     <panes>
       <pane id="ProjectPane">
-        <subPane />
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="titanic_survivial_pred" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
       </pane>
       <pane id="Scope" />
     </panes>
@@ -144,7 +158,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="HbShouldOpenHtmlAsHb" value="" />
     <property name="DefaultHtmlFileTemplate" value="Html5" />
-    <property name="last_opened_file_path" value="$USER_HOME$/R/shiny/www" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../shiny/www" />
   </component>
   <component name="RunManager">
     <configuration default="true" type="DartUnitRunConfigurationType" factoryName="DartUnit">
@@ -239,7 +253,7 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$USER_HOME$/R/ddp-wk3/www/carousel.css">
+    <entry file="file://$PROJECT_DIR$/../www/carousel.css">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2100">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -247,7 +261,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/R/ddp-wk3/www/junkyard.html">
+    <entry file="file://$PROJECT_DIR$/../www/junkyard.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-3.125" vertical-offset="0" max-vertical-offset="165">
           <caret line="5" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
@@ -257,7 +271,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/R/ddp-wk3/www/index.html">
+    <entry file="file://$PROJECT_DIR$/../www/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-11.333333" vertical-offset="508" max-vertical-offset="4215">
           <caret line="52" column="49" selection-start-line="52" selection-start-column="49" selection-end-line="52" selection-end-column="49" />
@@ -273,7 +287,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/R/ddp-wk3/www/contact.html">
+    <entry file="file://$PROJECT_DIR$/../www/contact.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-10.083333" vertical-offset="1183" max-vertical-offset="2100">
           <caret line="95" column="26" selection-start-line="95" selection-start-column="26" selection-end-line="95" selection-end-column="26" />
@@ -283,10 +297,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/R/ddp-wk3/www/about.html">
+    <entry file="file://$PROJECT_DIR$/../www/about.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.49833888" vertical-offset="0" max-vertical-offset="2670">
-          <caret line="20" column="17" selection-start-line="20" selection-start-column="17" selection-end-line="20" selection-end-column="17" />
+        <state vertical-scroll-proportion="0.07807309" vertical-offset="1903" max-vertical-offset="2700">
+          <caret line="130" column="33" selection-start-line="130" selection-start-column="33" selection-end-line="130" selection-end-column="33" />
           <folding>
             <element signature="n#style#0;n#img#0;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
